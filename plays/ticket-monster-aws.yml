@@ -5,6 +5,7 @@
   connection: local
   #reminder: vpc_subnet must be set via cloudforms AND allow SSH from anywhere
   #reminder: ec2_keypair must be set via cloudforms
+  #reminder: provider_id must be set via cloudorms, manually,and found easily using /api/providers
   vars:
     region:   us-east-1
     ami:      ami-9887c6e7 #centos 7.5 - need to subcribe in AWS Marketplace first! 
