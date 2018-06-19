@@ -1,2 +1,3 @@
 ---
 - src: sfromm.postgresql
+- src: geerlingguy.postgresql
