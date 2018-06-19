@@ -3,7 +3,16 @@
   hosts: localhost
   gather_facts: false
   connection: local
-  #reminder: vpc_subnet must be set via cloudforms AND allow SSH, 5432 and 8080 from anywhere
+  # MAIN ARTICLE https://access.redhat.com/articles/3060111
+  #We assume the following has been completed.
+  #  CloudForms Ansible Inside Role enabled
+  #  Amazon provider is configured in CloudForms
+  #  Ansible Credentials created for your Amazon environment.
+  #  ELB must be present in Amazon (e.g. type: classic, name: ticketmonster, port forwarding: 80, 8080, health check: HTTP:8080/index.html).
+  #  Experience in creating and ordering CloudForms Services.
+
+  #see https://cloudformsblog.redhat.com/2017/11/28/multi-tier-application-deployment-using-ansible-and-cloudforms/
+  #reminder: vpc_subnet must be set via cloudforms AND allow SSH, 5432, 80 and 8080 from anywhere
   #reminder: ec2_keypair must be set via cloudforms
   #reminder: provider_id must be set via cloudorms, manually,and found easily using /api/providers
   #reminder: pass miq_username and miq_password too
