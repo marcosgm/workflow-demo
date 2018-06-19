@@ -15,6 +15,9 @@
   # Rename the dir to avoid encoding the version in the init script
 - name: Rename install directory
   command: chdir=/usr/share /bin/mv jboss-as-7.1.1.Final jboss-as creates=/usr/share/jboss-as
+  
+- name: Download JBoss7.1.5 patch from jboss.org
+  get_url: url=http://repo1.maven.org/maven2/org/jboss/modules/jboss-modules/1.1.5.GA/jboss-modules-1.1.5.GA.jar dest=/usr/share/jboss-as/jboss-modules.jar
 
 - name: Add group "jboss"
   group: name=jboss
