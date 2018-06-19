@@ -199,14 +199,10 @@
     postgresql_users:
       - name: test
         password: test
-    postgresql_packages:
-      - postgresql
-      - postgresql-server
-      - postgresql-contrib
-      - python-psycopg2
 
   roles:
-    - { role: sfromm.postgresql }
+    - role: geerlingguy.postgresql
+      become: yes
 
   post_tasks:
     - name: Configure TCP/IP Client Authorizations
