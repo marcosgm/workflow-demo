@@ -221,7 +221,9 @@
 
   vars:
     region:   us-east-1
-
+    http_port: 8080
+    https_port: 443
+    
   pre_tasks:
     - name: Get ext_database_name
       set_fact:
